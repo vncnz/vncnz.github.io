@@ -1,0 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+svg {
+  background: -webkit-linear-gradient(270deg, transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.fakeintro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  position: relative;
+  height: auto;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.intro img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.intro .caption {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: white;
+}
+.intro .caption h1 {
+  display: inline-block;
+  width: 70%;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 50px;
+}
+
+.intro .overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.intro .overlay svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.copy {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem 2rem;
+  color: #466c7f;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.copy p {
+  margin-bottom: 1.5rem;
+}
+
+.copy .teaser {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.tw_button {
+  display: block;
+  color: #3B8ACA;
+  height: 40px;
+  width: 180px;
+  text-align: center;
+  margin: 2px auto;
+  line-height: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 20px rgba(59, 138, 202, 0);
+  outline: 1px solid;
+  outline-color: rgba(59, 138, 202, 0);
+  outline-offset: 0px;
+  -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  outline-color: #3B8ACA;
+  outline-offset: 0px;
+}
+
+.tw_button:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 12px rgba(59, 138, 202, 0.5), 0 0 20px rgba(59, 138, 202, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(59, 138, 202, 0);
+}
+
+.tw_button img {
+  height: 26px;
+  margin: 7px 0 7px 7px;
+  display: inline-block;
+  float: left;
+}

@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
+
+$blue:#8DD9FF;
+$twitterColor : #3B8ACA;
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg {
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));;
+}
+
+.fakeintro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  //opacity: 0.5;
+  //background: red;
+}
+// .intro {opacity: .5;}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  position: relative;
+  height: auto;
+  transform: translateZ(0);
+  //background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    // mix-blend-mode: multiply;
+  }
+}
+
+.intro .caption {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: white;
+  
+  h1 {
+    display: inline-block;
+    width: 70%;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 50px;
+  }
+}
+
+.intro .overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.copy {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem 2rem;
+  color: mix(black, $blue, 50%);
+  font-weight: 300;
+  font-size: 1rem;
+  
+  p {margin-bottom: 1.5rem;}
+}
+
+.copy .teaser {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.tw_button {
+  display: block;
+  color: $twitterColor;
+  height: 40px;
+  width: 180px;
+  text-align: center;
+  margin: 2px auto;
+  line-height: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 20px rgba($twitterColor, 0);
+  outline: 1px solid;
+  outline-color: rgba($twitterColor, 0);
+  outline-offset: 0px;
+  transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+  outline-color: $twitterColor;
+  outline-offset: 0px;
+}
+
+.tw_button:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 12px rgba($twitterColor, .5), 0 0 20px rgba($twitterColor, .2);
+  outline-offset: 15px;
+  outline-color: rgba($twitterColor, 0);
+}
+
+.tw_button img {
+  height: 26px;
+  margin: 7px 0 7px 7px;
+  display: inline-block;
+  float: left;
+}
