@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
 
-$blue:#8DD9FF;
+$blue: #8DD9FF;
 $twitterColor : #3B8ACA;
 
 *, *:before, *:after {
@@ -9,8 +9,8 @@ $twitterColor : #3B8ACA;
   box-sizing: border-box;
 }
 
-svg {
-  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));;
+#whiteLine {
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
 }
 
 .fakeintro {
@@ -23,6 +23,7 @@ svg {
   //background: red;
 }
 // .intro {opacity: .5;}
+
 
 html, body {
   width: 100%;
@@ -81,7 +82,7 @@ html, body {
   }
 }
 
-.copy {
+#mainContent {
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
@@ -93,7 +94,7 @@ html, body {
   p {margin-bottom: 1.5rem;}
 }
 
-.copy .teaser {
+#mainContent .teaser {
   font-size: 1.6rem;
   text-align: center;
 }
@@ -131,4 +132,20 @@ html, body {
   margin: 7px 0 7px 7px;
   display: inline-block;
   float: left;
+}
+
+article a {
+  color: inherit;
+  margin: 0 .5rem;
+}
+article a:before,
+article a:after {
+  text-decoration: none;
+  margin: 0 .15rem;
+}
+article a:before {
+  content: "[";
+}
+article a:after {
+  content: "]";
 }
