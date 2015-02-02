@@ -67,8 +67,6 @@ html, body {
   color: #466c7f;
   font-weight: 300;
   font-size: 1rem; }
-  #mainContent p {
-    margin-bottom: 1.5rem; }
 
 #mainContent .teaser {
   font-size: 1.6rem;
@@ -127,6 +125,16 @@ html, body {
   box-shadow: inset 0 0 12px rgba(37, 37, 39, 0.5), 0 0 20px rgba(37, 37, 39, 0.2);
   outline-color: rgba(37, 37, 39, 0); }
 
+.github_button {
+  color: #333;
+  box-shadow: inset 0 0 20px rgba(51, 51, 51, 0);
+  outline-color: rgba(51, 51, 51, 0);
+  outline-color: #333; }
+
+.github_button:hover {
+  box-shadow: inset 0 0 12px rgba(51, 51, 51, 0.5), 0 0 20px rgba(51, 51, 51, 0.2);
+  outline-color: rgba(51, 51, 51, 0); }
+
 .mail_button {
   color: #dd4b39;
   box-shadow: inset 0 0 20px rgba(221, 75, 57, 0);
@@ -137,14 +145,20 @@ html, body {
   box-shadow: inset 0 0 12px rgba(221, 75, 57, 0.5), 0 0 20px rgba(221, 75, 57, 0.2);
   outline-color: rgba(221, 75, 57, 0); }
 
+article {
+  padding: 1rem; }
+
 article a {
   color: inherit;
-  margin: 0 .5rem; }
+  margin: 0 .3rem; }
+
+article a:first-of-type {
+  margin-left: 1.5rem; }
 
 article a:before,
 article a:after {
   text-decoration: none;
-  margin: 0 .15rem; }
+  margin: 0 .05rem; }
 
 article a:before {
   content: "["; }
@@ -158,10 +172,10 @@ article a:after {
   overflow-y: hidden;
   white-space: nowrap;
   padding: 0;
-  text-align: center; }
-
-.gallery img {
-  height: 100%;
-  margin: 0 1rem; }
+  text-align: center;
+  margin: 1rem auto; }
+  .gallery img {
+    height: 100%;
+    margin: 0 1rem; }
 
 /*# sourceMappingURL=style.css.map */

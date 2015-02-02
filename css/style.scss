@@ -4,6 +4,7 @@ $blue: #8DD9FF;
 $twitterColor : #3B8ACA;
 $codepenColor: rgb(37, 37, 39);
 $gplusColor: #dd4b39;
+$githubColor: #333;
 
 *, *:before, *:after {
   margin: 0;
@@ -92,8 +93,6 @@ html, body {
   color: mix(black, $blue, 50%);
   font-weight: 300;
   font-size: 1rem;
-  
-  p {margin-bottom: 1.5rem;}
 }
 
 #mainContent .teaser {
@@ -163,6 +162,18 @@ html, body {
   outline-color: rgba($codepenColor, 0);
 }
 
+.github_button {
+  color: $githubColor;
+  box-shadow: inset 0 0 20px rgba($githubColor, 0);
+  outline-color: rgba($githubColor, 0);
+  outline-color: $githubColor;
+}
+
+.github_button:hover {
+  box-shadow: inset 0 0 12px rgba($githubColor, .5), 0 0 20px rgba($githubColor, .2);
+  outline-color: rgba($githubColor, 0);
+}
+
 .mail_button {
   color: $gplusColor;
   box-shadow: inset 0 0 20px rgba($gplusColor, 0);
@@ -177,16 +188,22 @@ html, body {
 
 
 
-
+article {
+  padding: 1rem;
+}
 
 article a {
   color: inherit;
-  margin: 0 .5rem;
+  margin: 0 .3rem;
 }
+article a:first-of-type {
+  margin-left: 1.5rem;
+}
+
 article a:before,
 article a:after {
   text-decoration: none;
-  margin: 0 .15rem;
+  margin: 0 .05rem;
 }
 article a:before {
   content: "[";
@@ -202,9 +219,10 @@ article a:after {
   white-space: nowrap;
   padding: 0;
   text-align: center;
-}
+  margin: 1rem auto;
 
-.gallery img {
-  height: 100%;
-  margin: 0 1rem;
+  img {
+    height: 100%;
+    margin: 0 1rem;
+  }
 }
