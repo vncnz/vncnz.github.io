@@ -74,36 +74,68 @@ html, body {
   font-size: 1.6rem;
   text-align: center; }
 
-.tw_button {
+#social_buttons {
   display: block;
-  color: #3B8ACA;
+  margin: .8rem auto;
+  width: auto;
+  text-align: center; }
+
+.social_button {
+  display: inline-block;
   height: 40px;
-  width: 180px;
   text-align: center;
-  margin: 2px auto;
+  margin: 2px .5rem;
   line-height: 40px;
   cursor: pointer;
   text-decoration: none;
   border: 1px solid transparent;
-  box-shadow: inset 0 0 20px rgba(59, 138, 202, 0);
   outline: 1px solid;
-  outline-color: rgba(59, 138, 202, 0);
   outline-offset: 0px;
   transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  outline-color: #3B8ACA;
   outline-offset: 0px; }
 
-.tw_button:hover {
+.social_button:hover {
   border: 1px solid;
-  box-shadow: inset 0 0 12px rgba(59, 138, 202, 0.5), 0 0 20px rgba(59, 138, 202, 0.2);
-  outline-offset: 15px;
-  outline-color: rgba(59, 138, 202, 0); }
+  outline-offset: 15px; }
 
-.tw_button img {
+.social_button img {
   height: 26px;
   margin: 7px 0 7px 7px;
   display: inline-block;
   float: left; }
+
+.social_button span {
+  padding: 0 .5rem 0 0; }
+
+.tw_button {
+  color: #3B8ACA;
+  box-shadow: inset 0 0 20px rgba(59, 138, 202, 0);
+  outline-color: rgba(59, 138, 202, 0);
+  outline-color: #3B8ACA; }
+
+.tw_button:hover {
+  box-shadow: inset 0 0 12px rgba(59, 138, 202, 0.5), 0 0 20px rgba(59, 138, 202, 0.2);
+  outline-color: rgba(59, 138, 202, 0); }
+
+.codepen_button {
+  color: #252527;
+  box-shadow: inset 0 0 20px rgba(37, 37, 39, 0);
+  outline-color: rgba(37, 37, 39, 0);
+  outline-color: #252527; }
+
+.codepen_button:hover {
+  box-shadow: inset 0 0 12px rgba(37, 37, 39, 0.5), 0 0 20px rgba(37, 37, 39, 0.2);
+  outline-color: rgba(37, 37, 39, 0); }
+
+.mail_button {
+  color: #dd4b39;
+  box-shadow: inset 0 0 20px rgba(221, 75, 57, 0);
+  outline-color: rgba(221, 75, 57, 0);
+  outline-color: #dd4b39; }
+
+.mail_button:hover {
+  box-shadow: inset 0 0 12px rgba(221, 75, 57, 0.5), 0 0 20px rgba(221, 75, 57, 0.2);
+  outline-color: rgba(221, 75, 57, 0); }
 
 article a {
   color: inherit;
@@ -119,5 +151,17 @@ article a:before {
 
 article a:after {
   content: "]"; }
+
+.gallery {
+  height: 10rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 0;
+  text-align: center; }
+
+.gallery img {
+  height: 100%;
+  margin: 0 1rem; }
 
 /*# sourceMappingURL=style.css.map */
