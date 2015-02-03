@@ -41,9 +41,22 @@ $(window).on("scroll resize", function(){
   
 });
 
+
+$(window).resize(function(){
+  if($("#social_buttons").width()<450) {//(($("#social_buttons > span").width() / $("#social_buttons").width()) > 0.9) {
+    $("body").addClass("mobile");
+  } else {
+    $("body").removeClass("mobile");
+  }
+  //console.log($("#social_buttons span").width() + "," + $("#social_buttons").width() + "   -> " + (($("#social_buttons span").width() / $("#social_buttons").width()) > 0.9));
+});
+
+
 setTimeout(function(){
   $(window).scroll();
+  $(window).resize();
 }, 550);
+
 
 //alert("5");
 console.log("Reloaded 9");

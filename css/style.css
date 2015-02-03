@@ -108,6 +108,20 @@ html, body {
 .social_button span {
   padding: 0 .5rem 0 0; }
 
+body:not(.mobile) .social_button:not(.mail_button) span:nth-of-type(2) {
+  display: none; }
+
+body.mobile .social_button {
+  width: 80%;
+  margin: .2rem 10%; }
+
+@media all and (max-width: 600px) {
+  body .social_button {
+    width: 80%;
+    margin: .2rem 10%; }
+
+  body .social_button span:nth-of-type(2) {
+    display: inline; } }
 .tw_button {
   color: #3B8ACA;
   box-shadow: inset 0 0 20px rgba(59, 138, 202, 0);
