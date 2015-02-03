@@ -5,11 +5,15 @@ $twitterColor : #3B8ACA;
 $codepenColor: rgb(37, 37, 39);
 $gplusColor: #dd4b39;
 $githubColor: #333;
+$linkedinColor: #4875B4;
 
 *, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+p {
+  margin: .4rem 0;
 }
 
 #whiteLine {
@@ -21,7 +25,7 @@ $githubColor: #333;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 0;
+  z-index: -1;
   //opacity: 0.5;
   //background: red;
 }
@@ -127,8 +131,8 @@ html, body {
   outline-offset: 15px;
 }
 
-.social_button img {
-  height: 26px;
+.social_button i {
+  font-size: 26px;
   margin: 7px 0 7px 7px;
   display: inline-block;
   float: left;
@@ -174,6 +178,18 @@ html, body {
   outline-color: rgba($githubColor, 0);
 }
 
+.linkedin_button {
+  color: $linkedinColor;
+  box-shadow: inset 0 0 20px rgba($linkedinColor, 0);
+  outline-color: rgba($linkedinColor, 0);
+  outline-color: $linkedinColor;
+}
+
+.linkedin_button:hover {
+  box-shadow: inset 0 0 12px rgba($linkedinColor, .5), 0 0 20px rgba($linkedinColor, .2);
+  outline-color: rgba($linkedinColor, 0);
+}
+
 .mail_button {
   color: $gplusColor;
   box-shadow: inset 0 0 20px rgba($gplusColor, 0);
@@ -184,6 +200,22 @@ html, body {
 .mail_button:hover {
   box-shadow: inset 0 0 12px rgba($gplusColor, .5), 0 0 20px rgba($gplusColor, .2);
   outline-color: rgba($gplusColor, 0);
+}
+
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+a:before,
+a:after {
+  text-decoration: none;
+}
+p a:before {
+  content: "[";
+}
+p a:after {
+  content: "]";
 }
 
 

@@ -43,7 +43,7 @@ $(window).on("scroll resize", function(){
 
 setTimeout(function(){
   $(window).scroll();
-}, 250);
+}, 550);
 
 //alert("5");
 console.log("Reloaded 9");
