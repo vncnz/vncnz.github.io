@@ -190,10 +190,12 @@ article {
   padding: 1rem; }
 
 article a {
-  color: inherit;
+  color: inherit; }
+
+article h4 a {
   margin: 0 .3rem; }
 
-article a:first-of-type {
+article h4 a:first-of-type {
   margin-left: 1.5rem; }
 
 article a:before,
