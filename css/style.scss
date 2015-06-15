@@ -177,7 +177,10 @@ header.blank {
 
 
 @for $i from 1 through 10 {
-  u.level-#{$i}:hover ~ .progressbar {
+  u.level-#{$i}:hover ~ .progressbar,
+  u.level-#{$i}:focus ~ .progressbar,
+  u.level-#{$i}:active ~ .progressbar,
+  u.level-#{$i}:focus ~ .progressbar {
     opacity: 1;
     transition: opacity 350ms 0ms ease-in-out;
   }
@@ -194,21 +197,30 @@ header.blank {
 }
 
 @for $i from 1 through 3 {
-  u.level-#{$i}:hover ~ .progressbar .progresslevel {
+  u.level-#{$i}:hover ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel,
+  u.level-#{$i}:active ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel {
     background: red;
     width: $i*10%;
   }
 }
 
 @for $i from 4 through 7 {
-  u.level-#{$i}:hover ~ .progressbar .progresslevel {
+  u.level-#{$i}:hover ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel,
+  u.level-#{$i}:active ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel {
     background: orange;
     width: $i*10%;
   }
 }
 
 @for $i from 7 through 10 {
-  u.level-#{$i}:hover ~ .progressbar .progresslevel {
+  u.level-#{$i}:hover ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel,
+  u.level-#{$i}:active ~ .progressbar .progresslevel,
+  u.level-#{$i}:focus ~ .progressbar .progresslevel {
     background: green;
     width: $i*10%;
   }
@@ -231,6 +243,7 @@ u > a {
     #imgContainer img {
         width: 7rem;
         height: 7rem;
+        border: 4px solid transparent;
     }
 }
 
@@ -238,6 +251,7 @@ u > a {
     #imgContainer img {
         width: 5.5rem;
         height: 5.5rem;
+        border: 2px solid transparent;
     }
     #headerText h1 {
       line-height: 1.8rem;
