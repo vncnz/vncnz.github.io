@@ -7,271 +7,327 @@ $gplusColor: #dd4b39;
 $githubColor: #333;
 $linkedinColor: #4875B4;
 
+@mixin prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+@mixin prefix_webkit($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
 *, *:before, *:after {
-  margin: 0;
-  padding: 0;
+  //margin: 0;
+  //padding: 0;
   box-sizing: border-box;
 }
-p {
-  margin: .4rem 0;
-}
-
-#whiteLine {
-  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
-}
-
-.fakeintro {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  //opacity: 0.5;
-  //background: red;
-}
-// .intro {opacity: .5;}
-
 
 html, body {
+  margin: 0;
   width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
-.intro {
+header, #header, #header * {
+  margin: 0;
+}
+/*
+header {
   position: relative;
-  height: auto;
-  transform: translateZ(0);
-  //background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
-  
-  img {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    // mix-blend-mode: multiply;
-  }
-}
-
-.intro .caption {
-  position: absolute;
-  bottom: 25%;
-  left: 0;
   width: 100%;
-  text-align: center;
-  z-index: 3;
-  color: white;
-  
-  h1 {
-    display: inline-block;
-    width: 70%;
-    font-size: 50px;
-    font-weight: 100;
-    line-height: 50px;
-  }
+  height: 70%;
+  background-image: url('../img/photorealistic-iphone-6-free-psd-mockups_09.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
-
-.intro .overlay {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
+*/
+header.image {
+  z-index: -1;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  z-index: 2;
-  
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  height: 70%;
+  background-image: url('../img/photorealistic-iphone-6-free-psd-mockups_09.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#mainContent {
+header.blank {
   width: 100%;
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 4rem 2rem 2rem 2rem;
-  color: mix(black, $blue, 50%);
-  font-weight: 300;
-  font-size: 1rem;
+  height: 70%;
+  background: transparent;
+  opacity: 0.01;
 }
 
-#mainContent .teaser {
-  font-size: 1.6rem;
-  text-align: center;
+#content {
+  background: white;
 }
 
-#social_buttons {
-  display: block;
-  margin: .8rem auto;
-  width: auto;
-  text-align: center;
+#header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 30%; // FIXME
+  display: -webkit-flex;
+  display: flex;
+  @include prefix_webkit(flex-direction, row);
+  width: 100%;
+  text-align:center;
+  background: white;
+  background: rgba(255,255,255,0.8);
 }
 
-.social_button {
+#imgContainer {
+  @include prefix_webkit(flex-grow, 1);
+  //background: coral;
+}
+#imgContainer img {
+  @include prefix_webkit(flex-grow, 4);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  box-shadow: 0 0 2px black;
+  margin: .7rem;
   display: inline-block;
-  height: 40px;
-  text-align: center;
-  margin: 2px .5rem;
-  line-height: 40px;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid transparent;
-  outline: 1px solid;
-  outline-offset: 0px;
-  transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
-  outline-offset: 0px;
 }
 
-.social_button:hover {
-  border: 1px solid;
-  outline-offset: 15px;
+#headerText {
+  @include prefix_webkit(flex-grow, 4);
+  @include prefix_webkit(align-self, center);
+  text-align: left;
+  @include prefix_webkit(flex-direction, column);
+  padding-left: 1.2rem;
 }
 
-.social_button i {
-  font-size: 26px;
-  margin: 7px 0 7px 7px;
-  display: inline-block;
-  float: left;
+#headerText h1 {
+  line-height: 2.6rem;
+  font-size: 2.6rem;
+}
+#headerText h5 {
+  color: #777;
 }
 
-.social_button span {
-  padding: 0 .5rem 0 0;
-}
 
-// FIXME start
-body:not(.mobile) .social_button:not(.mail_button) span:nth-of-type(2) {display:none;}
-body.mobile .social_button {
-  width: 80%;
-  margin: .2rem 10%;
-}
-@media all and (max-width: 600px){
-  body .social_button {
-    width: 80%;
-    margin: .2rem 10%;
-  }
-  body .social_button span:nth-of-type(2) {display:inline;}
-}
-// FIXME end
 
-.tw_button {
+
+
+
+
+
+
+
+
+
+#twitterCard {
   color: $twitterColor;
-  box-shadow: inset 0 0 20px rgba($twitterColor, 0);
-  outline-color: rgba($twitterColor, 0);
-  outline-color: $twitterColor;
+  a {
+    color: inherit;
+  }
 }
 
-.tw_button:hover {
-  box-shadow: inset 0 0 12px rgba($twitterColor, .5), 0 0 20px rgba($twitterColor, .2);
-  outline-color: rgba($twitterColor, 0);
-}
-
-.codepen_button {
-  color: $codepenColor;
-  box-shadow: inset 0 0 20px rgba($codepenColor, 0);
-  outline-color: rgba($codepenColor, 0);
-  outline-color: $codepenColor;
-}
-
-.codepen_button:hover {
-  box-shadow: inset 0 0 12px rgba($codepenColor, .5), 0 0 20px rgba($codepenColor, .2);
-  outline-color: rgba($codepenColor, 0);
-}
-
-.github_button {
-  color: $githubColor;
-  box-shadow: inset 0 0 20px rgba($githubColor, 0);
-  outline-color: rgba($githubColor, 0);
-  outline-color: $githubColor;
-}
-
-.github_button:hover {
-  box-shadow: inset 0 0 12px rgba($githubColor, .5), 0 0 20px rgba($githubColor, .2);
-  outline-color: rgba($githubColor, 0);
-}
-
-.linkedin_button {
+#linkedinCard {
   color: $linkedinColor;
-  box-shadow: inset 0 0 20px rgba($linkedinColor, 0);
-  outline-color: rgba($linkedinColor, 0);
-  outline-color: $linkedinColor;
+  a {
+    color: inherit;
+  }
 }
 
-.linkedin_button:hover {
-  box-shadow: inset 0 0 12px rgba($linkedinColor, .5), 0 0 20px rgba($linkedinColor, .2);
-  outline-color: rgba($linkedinColor, 0);
+#codepenCard {
+  color: $codepenColor;
+  a {
+    color: inherit;
+  }
 }
 
-.mail_button {
-  color: $gplusColor;
-  box-shadow: inset 0 0 20px rgba($gplusColor, 0);
-  outline-color: rgba($gplusColor, 0);
-  outline-color: $gplusColor;
+#githubCard {
+  color: $githubColor;
+  a {
+    color: inherit;
+  }
 }
 
-.mail_button:hover {
-  box-shadow: inset 0 0 12px rgba($gplusColor, .5), 0 0 20px rgba($gplusColor, .2);
-  outline-color: rgba($gplusColor, 0);
+#progressbar {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  transition: opacity 350ms 500ms ease-in-out;
+  //box-shadow: 0 0 1px gray;
 }
 
+#progresslevel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background: red;
+  height: 100%;
+  transition: background 350ms ease-in-out, width 350ms ease-in-out;
+}
+
+
+@for $i from 1 through 10 {
+  u.level-#{$i}:hover ~ #progressbar {
+    opacity: 1;
+    transition: opacity 350ms 0ms ease-in-out;
+  }
+
+    /*.progressbar.active-#{$i}:after {
+        width: $i * 1%;
+        background: rgb(255-($i*1.5), 100+$i*1.5, 100);
+    }*/
+}
+
+@for $i from 1 through 3 {
+  u.level-#{$i}:hover ~ #progressbar #progresslevel {
+    background: red;
+    width: $i*10%;
+  }
+}
+
+@for $i from 4 through 7 {
+  u.level-#{$i}:hover ~ #progressbar #progresslevel {
+    background: orange;
+    width: $i*10%;
+  }
+}
+
+@for $i from 7 through 10 {
+  u.level-#{$i}:hover ~ #progressbar #progresslevel {
+    background: green;
+    width: $i*10%;
+  }
+}
 
 a {
-  color: inherit;
-  cursor: pointer;
+  color:  #32CD32;
 }
-a:before,
-a:after {
-  text-decoration: none;
-}
-p a:before {
-  content: "[";
-}
-p a:after {
-  content: "]";
+
+u {    
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+    cursor: alias;
 }
 
 
 
-article {
-  padding: 1rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#social-menu {
+  margin-top: .5rem;
 }
 
-article a {
-  color: inherit;
-}
-article h4 a {
-  margin: 0 .3rem;
-}
-article h4 a:first-of-type {
-  margin-left: 1.5rem;
+#social-menu * {
+    text-decoration: none;
+    border: none;
 }
 
-article a:before,
-article a:after {
-  text-decoration: none;
-  margin: 0 .05rem;
-}
-article a:before {
-  content: "[";
-}
-article a:after {
-  content: "]";
+#social-menu .fa {
+    font-size: 1.7rem;
+    color: gray;
+    /*width: 1em;*/
+    bottom: 0;
+    margin-right: .3rem;
 }
 
-.gallery {
-  height: 10rem;
-  overflow-x: auto;
-  overflow-y:hidden;
-  white-space: nowrap;
-  padding: 0;
-  text-align: center;
-  margin: 1rem auto;
+#social-menu a>* {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
 
-  img {
+#social-menu a:hover>* {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    text-shadow: 1px 1px 1px whitesmoke !important;
+    text-shadow: 1px 1px 1px rgba(250,250,250,0.8) !important;
+}
+
+#social-menu a {
+    position: relative;
+    display: inline-block;
     height: 100%;
-    margin: 0 1rem;
-  }
 }
+
+#social-menu a>span {
+    position: absolute;
+    line-height: 30px;
+    top: 0;
+    opacity: 0;
+    right: 0px;
+    z-index: 99999;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px whitesmoke !important;
+    text-shadow: 1px 1px 1px rgba(250,250,250,0.8) !important;
+    color: rgb(255, 165, 0);
+}
+
+#social-menu .fa.fa-skype { text-shadow: 1px 1px 3px #12A5F4; }
+#social-menu a:hover .fa.fa-skype { color: #12A5F4; }
+#social-menu .fa.fa-facebook-square { text-shadow: 1px 1px 3px #3b5998; }
+#social-menu a:hover .fa.fa-facebook-square { color: #3b5998; }
+#social-menu .fa.fa-twitter-square { text-shadow: 1px 1px 3px #00a0d1; }
+#social-menu a:hover .fa.fa-twitter-square { color: #00a0d1; }
+#social-menu .fa.fa-google-plus-square { text-shadow: 1px 1px 3px #d34836; }
+#social-menu a:hover .fa.fa-google-plus-square { color: #d34836; }
+#social-menu .fa.fa-linkedin-square { text-shadow: 1px 1px 3px #4875B4; }
+#social-menu a:hover .fa.fa-linkedin-square { color: #4875B4; }
+#social-menu .fa.fa-github { text-shadow: 1px 1px 3px #333; }
+#social-menu a:hover .fa.fa-github { color: #333; }
+#social-menu .fa.fa-codepen { text-shadow: 1px 1px 2px #000; }
+#social-menu a:hover .fa.fa-codepen { color: #000; }
+#social-menu .fa.fa-envelope { text-shadow: 1px 1px 2px lime; }
+#social-menu a:hover .fa.fa-envelope { color: lime; }
+//#social-menu .fa.fa-cloud-download { text-shadow: 1px 1px 3px orange; }
+//#social-menu a:hover .fa.fa-cloud-download { color: orange; }
+#social-menu a>span { text-shadow: 1px 1px 3px orange; }
+#social-menu a:hover>span { color: #999; top: -30px; text-shadow: 1px 1px 1px orange !important; opacity: 1; }

@@ -3,6 +3,8 @@ found this function here
 http://stackoverflow.com/a/26831113
 */
 
+/*
+
 function inViewport($el) {
     var H = $(window).height(),
         r = $el[0].getBoundingClientRect(), t=r.top, b=r.bottom;
@@ -61,3 +63,4 @@ setTimeout(function(){
 //alert("5");
 console.log("Reloaded 9");
 
+*/
