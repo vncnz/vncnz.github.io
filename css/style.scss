@@ -227,8 +227,19 @@ u > a {
   border-bottom: 1px solid $mainColor;
 }
 
+@media screen and (max-width: 768px) {
+    #imgContainer img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
 
-
+@media screen and (max-width: 480px) {
+    #imgContainer img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
 
 
 
