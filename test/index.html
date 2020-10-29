@@ -16,11 +16,28 @@
 
   <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Special+Elite&display=swap" rel="stylesheet"> -->
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.5/vue.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+
 </head>
 
 <body>
   
-  Experiment
+    Experiment
+
+    <template id="test-template">
+        <div>Vue.js is OK</div>
+    </template>
+    
+    
+    <div id="app">
+        <button @click="save">Save</button>
+        <button @click="load">Load</button>
+        <pre>{{customers}}</pre>
+        <test/>
+    </div>
+
+    <script async="" src="main.js"></script>
 
 </body>
 
