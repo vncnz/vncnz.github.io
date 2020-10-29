@@ -7,247 +7,307 @@
 
   <title>Vincenzo Minolfi</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>-->
 
   <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
 
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="fontawesome430/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Special+Elite&display=swap" rel="stylesheet">
+
+    <script src="js/prefixfree.js"></script>
+
+    <style media="print">
+    :root {
+      font-size: 10pt;
+    }
+    .datesColumn {
+      width: 200pt !important;
+    }
+    #graph-column {
+      min-width: 180pt !important;
+      width: 180pt !important;
+    }
+    </style>
 
 </head>
 
 <body>
-
-  <header class="image">&nbsp;</header>
-  <header class="blank">&nbsp;</header>
-
-  <div id="content">
-
-    <div id="header">
-      <div id="imgContainer">
-        <img src="./img/DSC_0024.jpg"/>
+  <!--<div id="rule"></div>-->
+  <div id="main-content">
+    <header>
+      <div id="header-name">
+        <div>Vincenzo Minolfi</div>
+        <div>Software developer</div>
       </div>
-      <div id="headerText">
-        <h1>Vincenzo Minolfi</h1>
-        <h4>Web & software developer</h4>
-        <h5><i class="fa fa-map-marker"></i> Brescia, Italy</h5>
+      <ul id="contacts">
+        <li>
+          <i class="contact-icon fa fa-fw fa-envelope-o"></i>
+          <div class="contact-description">
+            <div class="contact-type">Email address</div>
+            <div class="contact-value">vincenzo.minolfi@gmail.com</div>
+          </div>
+        </li>
+        <li>
+          <i class="contact-icon fa fa-fw fa-phone"></i>
+          <div class="contact-description">
+            <div class="contact-type">Telephone number</div>
+            <div class="contact-value">331 7399872</div>
+          </div>
+        </li>
+        <li>
+          <i class="contact-icon fa fa-fw fa-globe"></i>
+          <div class="contact-description">
+            <div class="contact-type">Web address</div>
+            <a class="contact-value" href="http://vncnz.github.io">http://vncnz.github.io</a>
+          </div>
+        </li>
+        <li>
+          <i class="contact-icon fa fa-fw fa-twitter"></i>
+          <div class="contact-description">
+            <div class="contact-type">Twitter</div>
+            <a class="contact-value" href="http://twitter.com/VincenzoMinolfi" target="_blank">twitter.com/VincenzoMinolfi</a>
+          </div>
+        </li>
+        <li>
+          <i class="contact-icon fa fa-fw fa-github"></i>
+          <div class="contact-description">
+            <div class="contact-type">GitHub</div>
+            <a class="contact-value" href="http://github.com/vncnz" target="_blank">github.com/vncnz</a>
+          </div>
+        </li>
+      </ul>
+    </header>
 
-        <div id="social-menu">
-            <a target="_blank" href="https://twitter.com/VincenzoMinolfi">
-                <i class="fa fa-twitter-square"></i>
-            </a>
-            <!--<a target="_blank" href="https://www.facebook.com/vincenzo.minolfi">
-                <i class="fa fa-facebook-square fa-fw"></i>
-            </a>-->
-            <a target="_blank" href="http://it.linkedin.com/pub/vincenzo-minolfi/7a/7b3/257">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-            <a target="_blank" href="skype:vincenzo.minolfi?chat&topic=Contatto%20dal%20sito">
-                <i class="fa fa-skype"></i>
-            </a>
-            <a target="_blank" href="https://plus.google.com/+VincenzoMinolfi?rel=author">
-                <i class="fa fa-google-plus-square"></i>
-            </a>
-            <a target="_blank" href="http://github.com/vncnz">
-                <i class="fa fa-github"></i>
-            </a>
-            <a target="_blank" href="http://codepen.io/vncnz">
-                <i class="fa fa-codepen"></i>
-            </a>
-            <a target="_blank" href="mailto:vincenzo.minolfi@gmail.com">
-                <i class="fa fa-envelope"></i>
-            </a>
-        </div>
-
+    
+    
+    
+    
+    <div id="man-description">
+      <div id="man-description-short">
+        ---- This site is under construction ----
+      </div>
+      <div id="man-description-long">
+        My name is Vincenzo Minolfi and I&apos;m a software developer currently living in Brescia. I&apos;m a freelancer whom create mostly mobile applications with a multi-platform framework called Cordova/Phonegap. Anyway, I love Python, with which I realized experiments of any kind: genetic algorithms, ant colony optimization, bluetooth comm, 3D graphics.. I've a weakness for digital elettronics, too. Humanly speaking, I like artists such as Evanescence, Nightwish, Lacrimosa, Coldplay. [...]
       </div>
     </div>
+    
+    <div id="body-cv">
+      <div id="text-column">
+        <article id="work-experience" class="textual">
+          <h3>Work experience</h3>
+          <ul>
+            <li>
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Lumezzane (Brescia, Italy)</div>
+                <div>2014 - now</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">One! Travel Experience</div>
+                <div>
+                  I developed (and I&apos;m developing a totally new version of) a multi-platform mobile application that allows the user to browse catalogs of all travel agencies part of the network and to access their marriage services and gallery.
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Brescia (Italy)</div>
+                <div>2015 - now</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">SVIB</div>
+                <div>
+                  Long-term collaboration as full-stack developer, making use of C# (in .NET infrastructure) server-side, HTML5, CSS3 and AngularJS front-side, Microsoft SQL for data-persistence. Here I&apos;m developing digital signature web applications.
+                </div>
+              </div>
+            </li>
 
-    <hr/>
+            <li>
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Bologna (Italy)</div>
+                <div>2014</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">Mobimentum</div>
+                <div>
+                  Long-term collaboration to develop various mobile applications. I developed two native application for Android and two multi-platform applications in Phonegap (aka Cordova) with AngularJS v1.2 as javascript framework.
+                </div>
+              </div>
+            </li>
 
-    <section>
+            <li>
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Brescia (Italy)</div>
+                <div>2011 - 2015</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">MC3 Informatica</div>
+                <div>
+                  Long-term collaboration as software developer. Technologies most widely used are Phonegap (aka Cordova), Appcelerator Titanium, Java for Android, Java (standard), Liferay.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
 
-    <h2>Il sito &egrave; in via di sviluppo</h2>
 
-      <h4 class="title">Chi sono</h4>
 
-        <p>Mi chiamo Vincenzo Minolfi, sono nato e cresciuto in Valle Camonica (BS) ma attualmente vivo e lavoro a Brescia.</p>
-        <p>Bla bla bla</p>
-        <p>Laureato in Matematica con piano di studi orientato all&apos;informatica, sono uno sviluppatore software freelance e realizzo principalmente applicazioni per dispositivi mobile, ma anche siti web e applicazioni desktop, anche con la collaborazione del mio amico e collega <a target="_blank" href="http://morialberto.it">Alberto Mori</a></p>
+        <article id="education-experience" class="textual">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <!--<i class="fa fa-fw fa-circle-o"></i>-->
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Brescia (Italy)</div>
+                <div>2007 - 2012</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">Universit&agrave; Cattolica Del Sacro Cuore</div>
+                <div>
+                  Italian degree similar to a Bachelor of Mathematics Degree, with computer science-oriented curriculum.
+                </div>
+              </div>
+            </li>
 
-        <p>Sono un forte sostenitore di Python, il primo linguaggio da me imparato e amato, e con esso ho fatto esperimenti di ogni tipo: intelligenza artificiale (ad esempio algoritmi genetici e Ant Colony Optimization), problem solving di ogni genere, GUI, grafica 3D, comunicazione con periferiche bluetooth o usb. Segue una forte passione per la programmazione con le nuove tecnologie che si sono ormai diffuse: HTML5, con le relative nuove API JavaScript, e CSS3.</p>
+            <li>
+              <!--<i class="fa fa-fw fa-circle-o"></i>-->
+              <div class="circle"></div>
+              <div class="datesColumn where-and-when">
+                <div>Lovere (Brescia, Italy)</div>
+                <div>2002 - 2007</div>
+              </div>
+              <div class="what-and-how">
+                <div class="what">Liceo Scientifico Decio Celeri</div>
+                <div>
+                  High school leaving qualification in scientific studies.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
 
-        <p>Un&apos;altra piccola passione &egrave; per l&apos;elettronica digitale, ogni tanto eseguo piccoli esperimenti interfacciando un computer con il mondo esterno facendolo comunicare con una scheda di prototipazione rapida chiamata Arduino UNO. La mia attenzione si sta ora spostando, relativamente all&apos;elettronica, su <a href="http://micropython.org">pyboard</a> e <a href="http://wipy.io">wipy</a></p>
-
-    </section>
-
-    <section>
-      <h4 class="title">Conoscenze</h4>
-
-      <div>
-        Linguaggi di programmazione e semantici: 
-          <u class="level-8">Python</u>, 
-          <u class="level-6"><a href="https://it.wikipedia.org/wiki/C_sharp" target="_blank">C#</a></u>, 
-          <u class="level-9">HTML5</u>, 
-          <u class="level-10">CSS3</u>, 
-          <u class="level-8">JavaScript</u>, 
-          <u class="level-5">Java</u>, 
-          <u class="level-2"><a href="https://it.wikipedia.org/wiki/Objective-C" target="_blank">Objective-C</a></u>
-        <div class="progressbar"><div class="progresslevel">&nbsp;</div></div>
       </div>
-      <div>
-        Framework e librerie: 
-          <u class="level-8">AngularJS</u>, 
-          <u class="level-6">JQuery</u>, 
-          <u class="level-2"><a href="https://code.google.com/p/android-query" target="_blank">AQuery</a></u>
-        <div class="progressbar"><div class="progresslevel">&nbsp;</div></div>
-      </div>
-      <div>
-        Piattaforme di sviluppo e IDE: 
-          <u>Phonegap</u>, 
-          <u>Titanium</u>, 
-          <u class="level-5"><a href="http://monaca.io" target="_blank">Monaca</a></u>, 
-          <u>Visual Studio</u>, 
-          <u>Eclipse</u>
-        <div class="progressbar"><div class="progresslevel">&nbsp;</div></div>
-      </div>
 
-    </section>
+      <div id="graph-column">
+        <article id="professional-skills" class="graphic">
+          <h3>Professional skills</h3>
+          <div class="schema">
+            <div class="schema-row">
+              <div>&nbsp;</div>
+              <div>average</div>
+              <div>good</div>
+              <div>advanced</div>
+            </div>
+            <div class="schema-row">
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <ul class="rects">
+            <li>
+              <div>C#</div>
+              <div><div class="rect rect70">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>Python</div>
+              <div><div class="rect rect70">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>Java</div>
+              <div><div class="rect rect40">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>HTML5</div>
+              <div><div class="rect rect80">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>CSS3</div>
+              <div><div class="rect rect100">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>SCSS</div>
+              <div><div class="rect rect40">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>AngularJS</div>
+              <div><div class="rect rect80">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>Phonegap</div>
+              <div><div class="rect rect90">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>SQL</div>
+              <div><div class="rect rect40">&nbsp;</div></div>
+            </li>
+          </ul>
+        </article>
 
-    <section>
-      <h4>Link</h4>
-      <div>
-        ---
-      </div>
-    </section>
+        <article id="professional-skills" class="graphic">
+          <h3>Professional tools/IDE</h3>
+          <div class="schema">
+            <div class="schema-row">
+              <div>&nbsp;</div>
+              <div>average</div>
+              <div>good</div>
+              <div>advanced</div>
+            </div>
+            <div class="schema-row">
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <ul class="rects">
+            <li>
+              <div>Visual Studio</div>
+              <div><div class="rect rect40">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>Eclipse</div>
+              <div><div class="rect rect50">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>SVN</div>
+              <div><div class="rect rect60">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>GIT</div>
+              <div><div class="rect rect50">&nbsp;</div></div>
+            </li>
+            <li>
+              <div>XCode</div>
+              <div><div class="rect rect40">&nbsp;</div></div>
+            </li>
+            
+            <li>
+              <div>Acceleration Titanium</div>
+              <div><div class="rect rect60">&nbsp;</div></div>
+            </li>
+          </ul>
+        </article>
 
-    <section>
-      <h4>Altro</h4>
-      <div>
-        Interessi: [...]
       </div>
-      <div>
-        Musica: 
-        <u>Evanescence</u>, 
-        <u>Nightwish</u>, 
-        <u>...</u>
-      </div>
-      <div>
-        Boh
-      </div>
-    </section>
-
+    
+    </div>
+    
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-<div style="height:1500px;width:100%;display:block;"></div>
-
-<div id="mainContent">
-
-  <div>
-    <h2>Progetti personali recenti</h2>
-
-    <article>
-      <h4>ONE! Travel Experience
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=me.onetravel.mobile">Google Play</a>
-        <a target="_blank" href="https://itunes.apple.com/it/app/one!-travel-experience/id945514213?l=en&mt=8">Apple Store</a>
-      </h4>
-
-      <div class="gallery">
-        <img src="./img/onetravel/screen322x572.jpeg">
-        <img src="./img/onetravel/screen322x572-2.jpeg">
-        <img src="./img/onetravel/screen322x572-3.jpeg">
-        <img src="./img/onetravel/screen322x572-4.jpeg">
-        <img src="./img/onetravel/screen322x572-5.jpeg">
-      </div>
-
-      <p>
-        Sto sviluppando un&apos;applicazione che consente di sfogliare il catalogo di tutte le agenzie di viaggio iscritte al network One! e di controllare gli aggiornamenti legati alla propria lista nozze presso di esse, per la partecipazione di amici e familiari al costo del proprio viaggio di nozze. Una prima versione &egrave; gi&agrave; disponibile su Google Play ed Apple Store, prossimamente una seconda versione porter&agrave; delle grosse novit&agrave;!
-      </p>
-    </article>
-
-    <article>
-      <h4>2D Visibility</h4>
-      <div class="gallery">
-        <img src="./img/2dvisibility/example_debug_off.png">
-        <img src="./img/2dvisibility/example_debug_on.png">
-        <img src="./img/2dvisibility/example_clean.png">
-      </div>
-      <p>
-      Praesent vestibulum facilisis dolor, et mollis tortor consequat sit amet. Sed non ex sit amet ex lobortis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu consectetur magna. Mauris molestie accumsan mauris, vitae pretium nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada libero in sapien maximus feugiat. Etiam tempus, nisi in porta aliquam, ex metus cursus lacus, in tincidunt nibh elit a nibh. Ut ultricies nec sapien a vulputate. Aenean ullamcorper, est eu dictum pharetra, urna massa ornare sapien, vitae ornare est eros posuere tortor. Ut sagittis lectus laoreet, euismod libero in, ornare lectus.
-      </p>
-    </article>
-
-    <article>
-      <h4>BabyMemoApp <a target="_blank" href="https://github.com/vncnz/BabyMemoApp">Github</a></h4>
-      <div class="gallery">
-        <img src="./img/BabyMemoApp/home1.png">
-        <img src="./img/BabyMemoApp/home2.png">
-        <img src="./img/BabyMemoApp/aggiuntamemo.png">
-        <img src="./img/BabyMemoApp/visualizzazionememo.png">
-        <img src="./img/BabyMemoApp/eliminazionememo.png">
-      </div>
-      
-      <p>
-        Ho realizzato questa piccola applicazione per il mio amore il giorno di Natale 2014. Essa contiene dei contatori di giorni/settimane/mesi legati a noi ed a nostra figlia nata a novembre e permette l&apos;aggiunta e la rimozione di note. E&apos; basata sull&apos;ecosistema di sviluppo per applicazioni mobile <a target="_blank" href="https://monaca.io/">Monaca</a> e sul framework JavaScript<a target="_blank" href="https://angularjs.org/">AngularJS</a>, una piccola chicca &egrave; lo swipe-to-action da me implementato per l&apos;eliminazione degli elementi.
-      </p>
-    </article>
-
-    <article>
-      <h4>MYO <a target="_blank" href="http://myo.com">Sito ufficiale</a></h4>
-      <div class="gallery">
-        <img src="./img/MYO/guyshootinghistvwithhisfinger.jpg">
-        <img src="./img/MYO/myo_image_black.png">
-        <img src="./img/MYO/myo.jpg">
-      </div>
-      <p>
-        Sto iniziando a giocare con il mio nuovo MYO Armband, del quale ho pre-ordinato il Developer Kit pi&ugrave; di un anno fa. Per il momento sto approfondendo la comunicazione con esso sia in Javascript che in Python, la ricezione delle gesture e dei dati IMU (velocit&agrave;, orientamento e accelerazione).
-      </p>
-      <p>
-        In aliquet efficitur velit ac tempor. Ut id lectus nulla. Donec in ante egestas, vestibulum leo eget, volutpat purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et dui imperdiet, posuere libero non, molestie nulla. Sed euismod nec ligula ut lacinia. Integer pretium felis in sagittis consequat. Curabitur aliquam arcu vitae enim aliquam, non facilisis leo rhoncus. Sed dolor ex, elementum ut enim sit amet, fermentum ornare sem. Sed vitae augue eleifend, rutrum metus eget, tristique arcu. Proin porttitor, nibh nec aliquet pulvinar, metus mauris tempus velit, in volutpat elit elit id mauris. Nam tristique, odio tempor faucibus malesuada, lacus justo semper mauris, at tincidunt sapien nunc vel neque. Sed sollicitudin erat nec auctor facilisis. Etiam ut tellus nec mauris elementum commodo a ut libero. Duis in justo convallis, suscipit metus a, posuere augue.
-      </p>
-    </article>
-  </div>
-  -->
-
-</div>
-
-  <!--<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>-->
-  <script src='js/zepto.js'></script>
-
-  <script src="js/index.js"></script>
+  <!--<div id="perfecttoprint">Perfect to print!</div>-->
+  <div id="perfecttoprint">Print me!</div>
 
 </body>
 
