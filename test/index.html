@@ -28,13 +28,11 @@
     <template id="test-template">
         <div>Vue.js is OK</div>
     </template>
-    
-    
-    <div id="app">
+  
+    <div id="app" @dragover="dragover" @dragleave="dragleave" @drop="drop">
         <button @click="save">Save</button>
-        <button @click="load">Load</button>
         <pre>{{customers}}</pre>
-        <test/>
+        <test />
     </div>
 
     <script async="" src="main.js"></script>
