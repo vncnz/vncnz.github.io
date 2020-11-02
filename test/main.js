@@ -3,6 +3,15 @@ moment.locale("it");
 
 //Vue.config.keyCodes.up = [38, 87];
 
+var busMixin = Vue.component(
+    "busMixin",
+    Vue.extend({
+        mounted () {
+            this.$bus = this
+        }
+    })
+)
+
 var vueTest = Vue.component(
     "test",
     Vue.extend({
@@ -13,12 +22,64 @@ var vueTest = Vue.component(
     })
 )
 
+var customersComponent = Vue.component(
+    "customers",
+    Vue.extend({
+        template: "#customers-template",
+        mixins: [busMixin],
+        props: ['list'],
+        data () {
+            return {
+                search: null
+            }
+        },
+        computed: {
+            filteredList () {
+                if (this.search) {
+                    let lowerSearch = this.search.toLowerCase()
+                    return this.list.map(c => {
+                        let matches = null
+                        if (c.Firstname && c.Firstname.toLowerCase().indexOf(lowerSearch) > -1)
+                            matches = 'Firstname'
+                        else if (c.Lastname && c.Lastname.toLowerCase().indexOf(lowerSearch) > -1)
+                            matches = 'Lastname'
+                        else if (c.Address && c.Address.toLowerCase().indexOf(lowerSearch) > -1)
+                            matches = 'Address'
+                        else if (c.Phone && c.Phone.indexOf(lowerSearch) > -1)
+                            matches = 'Phone'
+                        else if (c.Phone2 && c.Phone2.indexOf(lowerSearch) > -1)
+                            matches = 'Phone2'
+                        return {
+                            ...c,
+                            matches
+                        }
+                    }).filter(c => c.matches)
+                }
+                return this.list.slice()
+            }
+        },
+        methods: {
+            select(c) {
+                this.$bus.$emit('selectcustomer', c.Id)
+            }
+        },
+        filters: {
+            Fullname (cust) {
+                if (cust.Firstname && cust.Lastname) return `${cust.Firstname} ${cust.Lastname}`
+                if (cust.Firstname) return cust.Firstname
+                return cust.Lastname
+            }
+        }
+    })
+)
+
 var app = new Vue({
     el: "#app",
+    mixin: ['busMixin'],
     data() {
         return {
             customers: [
-                { Firstname: 'Cliente 1', Lastname: 'Cognome 1', Phone: '123', Phone2: '456', Status: 'Completato', Price: 67.15, AdvancedPayment: 20 }
+                { Id: 0, Firstname: 'Cliente 1', Lastname: 'Cognome 1', Phone: '123', Phone2: '456', Status: 'Completato', Price: 67.15, AdvancedPayment: 20 }
             ],
             statuses: ['Completato', 'In corso', 'Non iniziato'],
             dragging: false
@@ -42,12 +103,10 @@ var app = new Vue({
             link.remove()
         },
         dragover(event) {
-            event.preventDefault();
-            // Add some visual fluff to show the user can drop its files
+            event.preventDefault()
             this.dragging = true
         },
-        dragleave(event) {
-            // Clean up
+        dragleave(/* event */) {
             this.dragging = false
         },
         drop(event) {
@@ -91,13 +150,24 @@ var app = new Vue({
     mounted() {
         for (let i = 2; i < 30; i++) {
             this.customers.push({
+                Id: this.customers.length + 1,
                 Firstname: 'Cliente ' + i,
                 Lastname: 'Cognome ' + i,
                 Phone: Math.random().toString(10).substring(2, 12),
                 Phone2: Math.random().toString(10).substring(2, 12),
                 Status: 'Completato',
                 Price: 40 + (parseInt(Math.random() * 26000) / 100),
-                AdvancedPayment: (parseInt(Math.random() * 5) * 10)
+                AdvancedPayment: (parseInt(Math.random() * 5) * 10),
+                Address: [
+                    'Via Nicoli 5, 25050 Piancogno',
+                    'Via Papa Giovanni XXIII 45, 25015 Desenzano D/G',
+                    'Via Del Gelso 4F, 25039 Travagliato',
+                    'Via Triumplina 33, 25023 Brescia'
+                ][parseInt(Math.random() * 4)]
+                /* {
+                    Street: ['Nicoli', 'Papa Giovanni XXIII', 'Del Gelso', 'Triumplina'][parseInt(Math.random() * 4)],
+                    Number: parseInt(Math.random() * 100)
+                } */
             })
         }
     }

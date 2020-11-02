@@ -8,13 +8,11 @@
   <title>Vincenzo Minolfi</title>
 
   <!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-
   <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
-
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
   <link rel="stylesheet" href="fontawesome430/css/font-awesome.min.css">
-
   <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Special+Elite&display=swap" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.5/vue.js"></script>
   <script src="https://momentjs.com/downloads/moment.js"></script>
@@ -22,17 +20,38 @@
 </head>
 
 <body>
-  
-    Experiment
 
     <template id="test-template">
         <div>Vue.js is OK</div>
     </template>
+
+    <template id="customers-template">
+        <div id="customers">
+            <div id="customers-filter">
+                <input v-model="search" placeholder="Digit something..." />
+                <div>{{list.length}} customers<span v-if="search"> {{filteredList.length}} matches</span></div>
+            </div>
+            <ul>
+                <li v-for="(c, idx) in filteredList" :key="idx" @click="select(c)">
+                    <span class="title">
+                        <span :class="{bold: c.matches === 'Firstname' }">{{c.Firstname}}</span>
+                        &nbsp;
+                        <span :class="{bold: c.matches === 'Lastname' }">{{c.Lastname}}</span>
+                    </span>
+                    <span v-if="c.matches && c.matches !== 'Firstname' && c.matches !== 'Lastname'" class="subtitle bold">{{ c[c.matches] }}</span>
+                    <span v-else class="subtitle">{{ c.Phone }}</span>
+                </li>
+            </ul>
+        </div>
+    </template>
   
     <div id="app" @dragover="dragover" @dragleave="dragleave" @drop="drop">
-        <button @click="save">Save</button>
-        <pre>{{customers}}</pre>
-        <test />
+        <header>Title <button @click="save">Save</button></header>
+        <customers :list="customers" />
+        <!-- <pre>{{customers}}</pre> -->
+        <footer>
+            <test />
+        </footer>
     </div>
 
     <script async="" src="main.js"></script>
